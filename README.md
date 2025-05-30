@@ -13,4 +13,5 @@
 5. Open in browser: `http://<link from terminal>`.
 
 ## Production build
-   `npm run build`
+   1. Run `npm run build`
+   2. Run `npm run preview`
