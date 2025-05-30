@@ -1,0 +1,180 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #1c1c28;
+  --color-secondary: #393953;
+  --color-secondaryHover: #4f4c64;
+  --color-brand: #6966ff;
+  --color-brandHover: #6c83ff;
+  --color-red: #e45555;
+  --color-green: #16b57f;
+  --color-white-100: #ffffff;
+  --color-white-500: #c8c7d8;
+  --color-tertiary: #a59eba;
+  --color-subtle: #393953;
+  --color-black: #000000;
+  --color-transparent: transparent;
+
+  --font-sans: Roboto;
+  --font-mono: Space Mono, monospace;
+}
+
+@layer components {
+  h2,
+  h3,
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 32px;
+  }
+  blockquote p:first-of-type::before,
+  blockquote p:first-of-type::after {
+    content: none;
+  }
+  blockquote p {
+    font-style: normal;
+    margin: 0px;
+    color: white !important;
+  }
+  .hero {
+    font-weight: 700;
+    line-height: clamp(48px, 2.286rem + 3.57vw, 88px);
+    font-size: clamp(40px, 1.786rem + 3.57vw, 80px);
+  }
+  .heading-xl {
+    font-weight: 700;
+    line-height: clamp(40px, 1.929rem + 2.86vw, 72px);
+    font-size: clamp(32px, 1.5rem + 2.5vw, 60px);
+  }
+  .heading-lg {
+    font-weight: 700;
+    line-height: clamp(32px, 1.714rem + 1.43vw, 48px);
+    font-size: clamp(24px, 1.214rem + 1.43vw, 40px);
+  }
+  .heading-md {
+    font-weight: 700;
+    line-height: 2rem;
+    font-size: clamp(20px, 1.179rem + 0.36vw, 24px);
+  }
+  .heading-sm {
+    font-weight: 700;
+    line-height: 1.5rem;
+    font-size: clamp(16px, 0.929rem + 0.36vw, 20px);
+  }
+  .paragraph-lg {
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-size: clamp(16px, 0.964rem + 0.18vw, 18px);
+  }
+  .paragraph-md {
+    font-weight: 400;
+    line-height: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+    font-size: clamp(14px, 0.839rem + 0.18vw, 16px);
+  }
+  .paragraph-sm {
+    font-weight: 600;
+    line-height: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+    font-size: clamp(12px, 0.714rem + 0.18vw, 14px);
+  }
+  .mono-paragraph-xl {
+    font-family: 'Space Mono', monospace;
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: 20px;
+  }
+  .mono-paragraph-lg {
+    font-family: 'Space Mono', monospace;
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: 18px;
+  }
+  .mono-paragraph-md {
+    font-family: 'Space Mono', monospace;
+    font-weight: 500;
+    line-height: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+    font-size: clamp(14px, 0.839rem + 0.18vw, 16px);
+  }
+  .mono-paragraph-sm {
+    font-family: 'Space Mono', monospace;
+    font-weight: 500;
+    line-height: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+    font-size: 14px;
+  }
+  .label {
+    font-weight: 700;
+    line-height: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+    font-size: clamp(14px, 0.839rem + 0.18vw, 16px);
+  }
+  .number {
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: 500;
+    line-height: clamp(3rem, 2.714rem + 1.43vw, 4rem);
+    font-size: clamp(48px, 2.714rem + 1.43vw, 64px);
+  }
+  .grid-img {
+    mask-image: radial-gradient(rgba(0, 0, 0, 1) 10%, transparent 70%);
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 1) 10%, transparent 70%);
+  }
+  .grid-gradient-to-bottom {
+    mask-image: linear-gradient(to bottom, #000, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+  }
+  .grid-gradient-to-top {
+    mask-image: linear-gradient(to top, #000, transparent);
+    -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  }
+  .grid-image {
+    background-size: 24px 24px;
+    background-image: linear-gradient(to right, #393953, transparent 1px),
+      linear-gradient(to bottom, #393953, transparent 1px);
+  }
+  .mask-to-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
+  .mask-to-top {
+    -webkit-mask-image: linear-gradient(to top, black, transparent);
+    mask-image: linear-gradient(to top, black, transparent);
+  }
+  .radial-mask {
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      black,
+      transparent 60%
+    );
+    mask-image: radial-gradient(ellipse at center, black, transparent 60%);
+  }
+  .tooltip {
+    position: relative;
+  }
+  .tooltip::before {
+    display: none;
+    position: absolute;
+    content: attr(data-tooltip);
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    padding: 8px 12px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    line-height: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+    font-size: clamp(12px, 0.714rem + 0.18vw, 14px);
+    border-radius: 8px;
+  }
+  .tooltip:hover::before {
+    display: block;
+  }
+  .tooltip::after {
+    display: none;
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-width: 8px;
+    border-color: black;
+  }
+  .tooltip:hover::after {
+    display: block;
+  }
+}
