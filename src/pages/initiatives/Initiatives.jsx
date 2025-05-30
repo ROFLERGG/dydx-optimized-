@@ -1,4 +1,3 @@
-import Layout from '../../components/layout';
 import Filter from './components/filter';
 import CallToAction from '@/components/CallToAction';
 import Content from '@/components/Content';
