@@ -1,6 +1,3 @@
-// import Arrow2 from './../../assets/right-arrow-1.png';
-// import Arrow3 from './../../assets/right-arrow-2.png';
-
 const ProcessCardData = [
   {
     id: 1,

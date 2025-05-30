@@ -1,4 +1,4 @@
-import Filter from './components/filter';
+import Filter from './components/Filter';
 import CallToAction from '@/components/CallToAction';
 import Content from '@/components/Content';
 

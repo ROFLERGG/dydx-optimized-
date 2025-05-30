@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Sprite from '@/assets/sprite.svg';
 import useFetch from '@/hooks/useFetch';
-import Skeleton from './skeleton';
+import Skeleton from './Skeleton';
 import Button from '@/components/ui/Buttons';
 
 const ExpensesFilter = () => {
